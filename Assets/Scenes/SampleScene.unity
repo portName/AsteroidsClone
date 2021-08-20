@@ -288,7 +288,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144077873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 603.1542, y: 422.52728, z: -56.16443}
+  m_LocalPosition: {x: 6359.1543, y: 422.52728, z: -56.16443}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1240,7 +1240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538612512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5756, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4183,9 +4183,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceWeight: 0
-  deathWeight: 3
-  hitWeight: 2
-  timeWeight: 1
+  deathWeight: 0
+  hitWeight: 0
+  timeWeight: 0.01
   attackWeight: 0
   ultimateWeight: 0
 --- !u!4 &2139320709
@@ -4196,7 +4196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139320707}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 603.1542, y: 422.52728, z: -56.16443}
+  m_LocalPosition: {x: 6359.1543, y: 422.52728, z: -56.16443}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4213,12 +4213,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: b566e369a369bde42b863040f7c67b51,
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655628786700927223, guid: aaaa45249a0a6ec48876fe5147720c12,
         type: 3}
+      propertyPath: m_InferenceDevice
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655628786700927223, guid: aaaa45249a0a6ec48876fe5147720c12,
+        type: 3}
+      propertyPath: m_UseChildSensors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1655628786700927223, guid: aaaa45249a0a6ec48876fe5147720c12,
         type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 39
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655628786700927223, guid: aaaa45249a0a6ec48876fe5147720c12,
+        type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655628786700927223, guid: aaaa45249a0a6ec48876fe5147720c12,
+        type: 3}
+      propertyPath: m_BrainParameters.VectorActionSize.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655628786700927223, guid: aaaa45249a0a6ec48876fe5147720c12,
+        type: 3}
+      propertyPath: m_BrainParameters.m_ActionSpec.m_NumContinuousActions
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3632200871573719514, guid: aaaa45249a0a6ec48876fe5147720c12,
         type: 3}
@@ -4302,8 +4326,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3831336758834619206, guid: aaaa45249a0a6ec48876fe5147720c12,
         type: 3}
+      propertyPath: _sensorUpdateTime
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3831336758834619206, guid: aaaa45249a0a6ec48876fe5147720c12,
+        type: 3}
       propertyPath: _searchEnemyRadius
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaaa45249a0a6ec48876fe5147720c12, type: 3}

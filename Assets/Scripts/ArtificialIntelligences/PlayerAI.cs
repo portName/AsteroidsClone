@@ -25,7 +25,7 @@ namespace ArtificialIntelligences
         private float _isMove;
         private float _isUltimate;
         
-        private List<Vector3> _distanceToAsteroids = new List<Vector3>();
+        [SerializeField] private List<Vector3> _distanceToAsteroids = new List<Vector3>();
         private Rigidbody2D _rigidbody2D;
         private Coroutine _timerCoroutine;
         
@@ -62,13 +62,9 @@ namespace ArtificialIntelligences
             foreach (var hitColliders2D in listResult.TakeWhile(hitColliders2D => searchCountEnemy != _searchEnemyCount && hitColliders2D.CompareTag("enemy")))
             {
                 searchCountEnemy++;
-                _distanceToAsteroids.Add(hitColliders2D.transform.position - transform.position);
+                _distanceToAsteroids.Add(hitColliders2D.transform.position);
             }
-
-            for (var i = _distanceToAsteroids.Count; i < _searchEnemyCount; i++)
-            {
-                _distanceToAsteroids.Add(Vector3.zero);
-            }
+            
         }
         
         private void OnDrawGizmosSelected()
@@ -78,7 +74,7 @@ namespace ArtificialIntelligences
             foreach (var distance in _distanceToAsteroids)
             {
                 var position = transform.position;
-                Debug.DrawLine(position, position + distance, Color.cyan);
+                Debug.DrawLine(position, distance, Color.cyan);
             }
         }
 
@@ -86,12 +82,11 @@ namespace ArtificialIntelligences
         {
             // Target and Agent positions
             sensor.AddObservation(transform.position);
+            sensor.AddObservation(transform.rotation);
             foreach (var distance in _distanceToAsteroids)
             {
                 sensor.AddObservation(distance);
             }
-            sensor.AddObservation(_rigidbody2D.velocity);
-            sensor.AddObservation(transform.rotation);
         }
 
         public override void OnActionReceived(ActionBuffers actions)
@@ -99,36 +94,34 @@ namespace ArtificialIntelligences
             
             _isLeft = actions.ContinuousActions[0];
             _isRight = actions.ContinuousActions[1];
-            _isAttack = actions.ContinuousActions[2];
-            _isMove = actions.ContinuousActions[3];
-            _isUltimate = actions.ContinuousActions[4];
+            _isMove = actions.ContinuousActions[2];
         }
 
 
 
         public bool IsAttackButton()
         {
-            return _isAttack >= 0.5;;
+            return _isAttack >= 0.6;;
         }
 
         public bool IsUltimateButton()
         {
-            return _isUltimate >= 0.5;;
+            return _isUltimate >= 0.6;;
         }
 
         public bool IsLeftRotationButton()
         {
-            return _isLeft >= 0.5;;
+            return _isLeft >= 0.6;;
         }
 
         public bool IsRightRotationButton()
         {
-            return _isRight >= 0.5;;
+            return _isRight >= 0.6;;
         }
 
         public bool IsMove()
         {
-            return _isMove >= 0.5;
+            return _isMove >= 0.6;
         }
 
         public Vector3 Move()

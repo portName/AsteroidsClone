@@ -2,31 +2,22 @@
     "SpaceSheepAi": {
         "checkpoints": [
             {
-                "steps": 499949,
-                "file_path": "results\\SpaceSheepAi\\SpaceSheepAi\\SpaceSheepAi-499949.onnx",
-                "reward": 28.807692307692307,
-                "creation_time": 1629366527.9485588,
+                "steps": 50244,
+                "file_path": "results\\SpaceSheepAi\\SpaceSheepAi\\SpaceSheepAi-50244.onnx",
+                "reward": null,
+                "creation_time": 1629450664.552954,
                 "auxillary_file_paths": [
-                    "results\\SpaceSheepAi\\SpaceSheepAi\\SpaceSheepAi-499949.pt"
-                ]
-            },
-            {
-                "steps": 600061,
-                "file_path": "results\\SpaceSheepAi\\SpaceSheepAi\\SpaceSheepAi-600061.onnx",
-                "reward": 36.285714285714285,
-                "creation_time": 1629363690.8344104,
-                "auxillary_file_paths": [
-                    "results\\SpaceSheepAi\\SpaceSheepAi\\SpaceSheepAi-600061.pt"
+                    "results\\SpaceSheepAi\\SpaceSheepAi\\SpaceSheepAi-50244.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 600061,
+            "steps": 50244,
             "file_path": "results\\SpaceSheepAi\\SpaceSheepAi.onnx",
-            "reward": 36.285714285714285,
-            "creation_time": 1629363690.8344104,
+            "reward": null,
+            "creation_time": 1629450664.552954,
             "auxillary_file_paths": [
-                "results\\SpaceSheepAi\\SpaceSheepAi\\SpaceSheepAi-600061.pt"
+                "results\\SpaceSheepAi\\SpaceSheepAi\\SpaceSheepAi-50244.pt"
             ]
         }
     },
