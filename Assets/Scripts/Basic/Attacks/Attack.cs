@@ -1,4 +1,5 @@
 using System.Collections;
+using Basic.Attacks.Info;
 using UnityEngine;
 
 namespace Basic.Attacks

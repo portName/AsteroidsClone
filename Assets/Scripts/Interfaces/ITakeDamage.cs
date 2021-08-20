@@ -1,4 +1,5 @@
 ﻿using Basic.Attacks;
+using Basic.Attacks.Info;
 
 namespace Interfaces
 {

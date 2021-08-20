@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 5788562375743269426}
   - component: {fileID: 1655628786700927223}
   - component: {fileID: 3831336758834619206}
+  - component: {fileID: 3078857690495975638}
   m_Layer: 0
   m_Name: SpaceShipAI
   m_TagString: Untagged
@@ -65,7 +66,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3632200871573719518}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -88,7 +89,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -193,7 +193,7 @@ MonoBehaviour:
   _bodyDamage: 2
   _attackDamage: 1
   _ultimateDamage: 2
-  _ai: {fileID: 0}
+  _ai: {fileID: 3831336758834619206}
 --- !u!114 &3632200871573719510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bullet: {fileID: 7414537867653216427, guid: b65716ae9fbd7974f8eb910b4685d946, type: 3}
   _dulley: {fileID: 3632200870634952736}
-  _waitTime: 0.4
+  _waitTime: 1000
   _fireAudioClip: {fileID: 8300000, guid: 3de3c4edda195184f95cd79ea151a59b, type: 3}
   _scaleFireAudioClip: 0.3
 --- !u!114 &3632200871573719504
@@ -300,17 +300,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 8
+    VectorObservationSize: 21
     NumStackedVectorObservations: 1
-    VectorActionSize: 02000000
+    m_ActionSpec:
+      m_NumContinuousActions: 5
+      BranchSizes: 
+    VectorActionSize: 05000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
-  m_Model: {fileID: 0}
-  m_InferenceDevice: 0
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: 7b966a9b57fa01e4880c35f4e7922756, type: 3}
+  m_InferenceDevice: 2
   m_BehaviorType: 0
   m_BehaviorName: SpaceSheepAi
   TeamId: 0
   m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!114 &3831336758834619206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,6 +332,22 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 0
-  _sensorUpdateTime: 0.1
+  MaxStep: 50000
+  _sensorUpdateTime: 0.01
   _searchEnemyRadius: 1
+  _searchEnemyCount: 4
+  _timeNeedToAlive: 1
+--- !u!114 &3078857690495975638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3632200871573719518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 1

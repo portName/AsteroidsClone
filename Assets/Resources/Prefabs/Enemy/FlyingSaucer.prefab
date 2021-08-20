@@ -12,9 +12,15 @@ GameObject:
   - component: {fileID: 4476541367338336003}
   - component: {fileID: 8498746932549467887}
   - component: {fileID: 653696603210313582}
-  m_Layer: 6
+  - component: {fileID: 254258077212251554}
+  - component: {fileID: 7587784692205133667}
+  - component: {fileID: 5486664078281979875}
+  - component: {fileID: 6622226145294852111}
+  - component: {fileID: 4326000735787219314}
+  - component: {fileID: 3448522389837630459}
+  m_Layer: 0
   m_Name: FlyingSaucer
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +54,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -145,3 +150,91 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &254258077212251554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820080547764177676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45559cafaba48b0ab889f0c031692f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedMove: 5
+  _speedRotate: 0
+--- !u!114 &7587784692205133667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820080547764177676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bceee4b07a2e44abb9aaacc399c905bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 2
+  _maxHealth: 2
+--- !u!114 &5486664078281979875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820080547764177676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a02434cb724069a4a674e8995fd073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6622226145294852111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820080547764177676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5272ab55df8e4040b401c6a24c278248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 0
+  radius: 1
+  power: 1
+--- !u!95 &4326000735787219314
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820080547764177676}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3448522389837630459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820080547764177676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2390d436dd541f1b4727a96f98bef10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 2
+  _destroyAudioClip: {fileID: 8300000, guid: 27e68809f3b17fc4bb2e907e20c9fce5, type: 3}

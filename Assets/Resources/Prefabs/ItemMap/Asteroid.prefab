@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3329612583713848817}
   - component: {fileID: 7821034253507011761}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Destroy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -92,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7144776484594911613}
   - component: {fileID: 7821034253507011758}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Destroy4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +127,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -174,7 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6957721633744370360}
   - component: {fileID: 7821034253507011759}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Destroy3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +208,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -264,9 +261,9 @@ GameObject:
   - component: {fileID: 3441277133663933704}
   - component: {fileID: 1766158611930039260}
   - component: {fileID: 7821034253507011757}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Asteroid
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,7 +301,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -556,7 +552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8041213768276543974}
   - component: {fileID: 7821034253507011760}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Destroy2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,7 +588,6 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

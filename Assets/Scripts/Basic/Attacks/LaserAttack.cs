@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Basic.Attacks.Info;
 using UnityEngine;
 
 namespace Basic.Attacks
@@ -9,6 +10,7 @@ namespace Basic.Attacks
         [SerializeField] private GameObject _bullet;
         [SerializeField] private Transform _dulley;
         [SerializeField] private float _waitTime;
+        [SerializeField] private float _durationAttack;
         [SerializeField] private AudioClip _fireAudioClip;
         [SerializeField] private float _scaleFireAudioClip;
 
@@ -20,6 +22,7 @@ namespace Basic.Attacks
             _bulletCurrent = Instantiate(_bullet, _dulley);
             var attack = _bulletCurrent.GetComponent<TriggerAttack>();
             attack._info = info;
+            StartCoroutine(DurationAttack());
             MainCamera.Instance.Audio().PlayOneShot(_fireAudioClip, _scaleFireAudioClip);
         }
 
@@ -38,6 +41,10 @@ namespace Basic.Attacks
             _isReload = true;
             yield return new WaitForSeconds(_waitTime);
             _isReload = false;
+        }
+        private IEnumerator DurationAttack()
+        {
+            yield return new WaitForSeconds(_durationAttack);
             Destroy(_bulletCurrent);
         }
     }

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Basic.Inputs;
+using System.Linq;
+using Global;
 using Interfaces;
+using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
 
@@ -11,11 +13,11 @@ namespace ArtificialIntelligences
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerAI : AI, ICustomInput
     {
-
-        
         
         [SerializeField]private float _sensorUpdateTime;
         [SerializeField]private float _searchEnemyRadius;
+        [SerializeField]private int _searchEnemyCount;
+        [SerializeField]private float _timeNeedToAlive;
 
         private float _isLeft;
         private float _isRight;
@@ -25,6 +27,7 @@ namespace ArtificialIntelligences
         
         private List<Vector3> _distanceToAsteroids = new List<Vector3>();
         private Rigidbody2D _rigidbody2D;
+        private Coroutine _timerCoroutine;
         
         private void Awake()
         {
@@ -34,8 +37,9 @@ namespace ArtificialIntelligences
         private void Start()
         {
             StartCoroutine(SensorUpdate());
+            
         }
-
+        
         private IEnumerator SensorUpdate()
         {
             while (true)
@@ -45,15 +49,25 @@ namespace ArtificialIntelligences
             }
         }
 
+        public void PlayerDeath()
+        {
+            EndEpisode();
+        }
         private void SearchEnemy()
         {
             _distanceToAsteroids.Clear();
             var listResult = new List<Collider2D>();
-
+            var searchCountEnemy = 0;
             Physics2D.OverlapCircle(transform.position, _searchEnemyRadius, new ContactFilter2D(), listResult);
-            foreach (var hitColliders2D in listResult)
+            foreach (var hitColliders2D in listResult.TakeWhile(hitColliders2D => searchCountEnemy != _searchEnemyCount && hitColliders2D.CompareTag("enemy")))
             {
+                searchCountEnemy++;
                 _distanceToAsteroids.Add(hitColliders2D.transform.position - transform.position);
+            }
+
+            for (var i = _distanceToAsteroids.Count; i < _searchEnemyCount; i++)
+            {
+                _distanceToAsteroids.Add(Vector3.zero);
             }
         }
         
@@ -80,38 +94,41 @@ namespace ArtificialIntelligences
             sensor.AddObservation(transform.rotation);
         }
 
-        public override void OnActionReceived(float[] vectorAction)
+        public override void OnActionReceived(ActionBuffers actions)
         {
-            _isLeft = vectorAction[0];
-            _isRight = vectorAction[1];
-            _isAttack = vectorAction[2];
-            _isMove = vectorAction[3];
-            _isUltimate = vectorAction[4];
+            
+            _isLeft = actions.ContinuousActions[0];
+            _isRight = actions.ContinuousActions[1];
+            _isAttack = actions.ContinuousActions[2];
+            _isMove = actions.ContinuousActions[3];
+            _isUltimate = actions.ContinuousActions[4];
         }
+
+
 
         public bool IsAttackButton()
         {
-            return _isAttack > 0.1;
+            return _isAttack >= 0.5;;
         }
 
         public bool IsUltimateButton()
         {
-            return _isUltimate > 0.1;
+            return _isUltimate >= 0.5;;
         }
 
         public bool IsLeftRotationButton()
         {
-            return _isLeft > 0.1;
+            return _isLeft >= 0.5;;
         }
 
         public bool IsRightRotationButton()
         {
-            return _isRight > 0.1;
+            return _isRight >= 0.5;;
         }
 
         public bool IsMove()
         {
-            return _isMove > 0.1;
+            return _isMove >= 0.5;
         }
 
         public Vector3 Move()

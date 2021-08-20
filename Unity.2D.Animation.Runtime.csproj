@@ -26,7 +26,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2019_4_29;UNITY_2019_4;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;ENABLE_ANIMATION_BURST;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2019_4_29;UNITY_2019_4;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn></NoWarn>
@@ -51,26 +51,26 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\AssemblyInfo.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\BufferManager.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\Components.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\DeformSpriteSystem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\NativeArrayHelper.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\NativeCustomSlice.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\PrepareSkinningSystem.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\SpriteLib\SpriteLibrary.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\SpriteLib\SpriteLibraryAsset.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\SpriteLib\SpriteResolver.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\SpriteSkin.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\SpriteSkinBatch.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\SpriteSkinComposite.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\SpriteSkinEntity.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\SpriteSkinManager.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\SpriteSkinUtility.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\TransformAccessJob.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\UpdateBoundsJob.cs" />
-     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\UpdateBoundsSystem.cs" />
-     <None Include="Library\PackageCache\com.unity.2d.animation@5.0.6\Runtime\Unity.2D.Animation.Runtime.asmdef" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\AssemblyInfo.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\BufferManager.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\Components.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\DeformSpriteSystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\NativeArrayHelper.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\NativeCustomSlice.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\PrepareSkinningSystem.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\SpriteLib\SpriteLibrary.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\SpriteLib\SpriteLibraryAsset.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\SpriteLib\SpriteResolver.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\SpriteSkin.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\SpriteSkinBatch.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\SpriteSkinComposite.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\SpriteSkinEntity.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\SpriteSkinManager.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\SpriteSkinUtility.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\TransformAccessJob.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\UpdateBoundsJob.cs" />
+     <Compile Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\UpdateBoundsSystem.cs" />
+     <None Include="Library\PackageCache\com.unity.2d.animation@3.2.9\Runtime\Unity.2D.Animation.Runtime.asmdef" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.29f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -275,35 +275,17 @@
  <Reference Include="UnityEditor.AppleTV.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.29f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.AppleTV.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="Google.Protobuf">
- <HintPath>C:/Users/PortName/Asteroids Clone/Library/PackageCache/com.unity.barracuda@1.0.4/Barracuda/Runtime/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Burst.Unsafe">
- <HintPath>C:/Users/PortName/Asteroids Clone/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
- </Reference>
  <Reference Include="log4netPlastic">
- <HintPath>C:/Users/PortName/Asteroids Clone/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+ <HintPath>C:/Users/PortName/Asteroids Clone/Library/PackageCache/com.unity.collab-proxy@1.6.0/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Plastic.Antlr3.Runtime">
- <HintPath>C:/Users/PortName/Asteroids Clone/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+ <HintPath>C:/Users/PortName/Asteroids Clone/Library/PackageCache/com.unity.collab-proxy@1.6.0/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="unityplastic">
- <HintPath>C:/Users/PortName/Asteroids Clone/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+ <HintPath>C:/Users/PortName/Asteroids Clone/Library/PackageCache/com.unity.collab-proxy@1.6.0/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
  </Reference>
- <Reference Include="System.IO.Abstractions">
- <HintPath>C:/Users/PortName/Asteroids Clone/Library/PackageCache/com.unity.ml-agents@1.0.8/Plugins/System.IO.Abstractions.dll</HintPath>
- </Reference>
- <Reference Include="System.IO.Abstractions.TestingHelpers">
- <HintPath>C:/Users/PortName/Asteroids Clone/Library/PackageCache/com.unity.ml-agents@1.0.8/Plugins/System.IO.Abstractions.TestingHelpers.dll</HintPath>
- </Reference>
- <Reference Include="Grpc.Core">
- <HintPath>C:/Users/PortName/Asteroids Clone/Library/PackageCache/com.unity.ml-agents@1.0.8/Plugins/ProtoBuffer/Grpc.Core.dll</HintPath>
- </Reference>
- <Reference Include="System.Interactive.Async">
- <HintPath>C:/Users/PortName/Asteroids Clone/Library/PackageCache/com.unity.ml-agents@1.0.8/Plugins/ProtoBuffer/System.Interactive.Async.dll</HintPath>
- </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/PortName/Asteroids Clone/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <Reference Include="Unity.Plastic.Newtonsoft.Json">
+ <HintPath>C:/Users/PortName/Asteroids Clone/Library/PackageCache/com.unity.collab-proxy@1.6.0/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.29f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -678,10 +660,6 @@
     <ProjectReference Include="Unity.Mathematics.csproj">
       <Project>{03e89cf3-7916-e84e-546c-78ca578373e2}</Project>
       <Name>Unity.Mathematics</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{449af043-91b5-3ea6-e10d-ff64787a8e9a}</Project>
-      <Name>Unity.Burst</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

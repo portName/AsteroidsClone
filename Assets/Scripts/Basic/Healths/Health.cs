@@ -8,8 +8,7 @@ namespace Basic.Healths
     {
         [SerializeField] private float _health;
         [SerializeField] private float _maxHealth;
-
-        public float Value() => _health;
+        
         public float Heal() => _health = _maxHealth;
         
 
@@ -28,5 +27,9 @@ namespace Basic.Healths
             return _health;
         }
 
+        public bool IsDeath()
+        {
+            return _health <= 0;
+        }
     }
 }

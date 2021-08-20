@@ -1,6 +1,7 @@
 using System;
 using ArtificialIntelligences;
 using Basic.Attacks;
+using Basic.Attacks.Info;
 using Basic.Healths;
 using Basic.Inputs;
 using Basic.Movements;
@@ -16,7 +17,7 @@ namespace Basic
     [RequireComponent(typeof(LaserAttack))]
     [RequireComponent(typeof(CollisionAttack))]
     [RequireComponent(typeof(Health))]
-    public class Player : MonoBehaviour, ITakeDamage, IChange<Health>, IDeleteAble
+    public class Player : MonoBehaviour, ITakeDamage, IChange<Health>, IDeleteAble, IHitCallback
     {
         [SerializeField] private float _bodyDamage;
         [SerializeField] private float _attackDamage;
@@ -50,10 +51,9 @@ namespace Basic
             _health = GetComponent<Health>();
             _collisionAttack = GetComponent<CollisionAttack>();
             
-            _collisionAttack._info = new AttackInfo
+            _collisionAttack._info = new AttackInfo(gameObject)
             {
-                Damage = _bodyDamage,
-                Owner = gameObject
+                Damage = _bodyDamage
             };
         }
 
@@ -68,22 +68,22 @@ namespace Basic
         private  void Attack()
         {
             if (!_input.IsAttackButton() || _bulletAttack.IsReload()) return;
-            _bulletAttack.Fire(new AttackInfo
+            _bulletAttack.Fire(new AttackInfo(gameObject)
             {
-                Damage = _attackDamage,
-                Owner = gameObject
+                Damage = _attackDamage
             });
+            GameScore.Instance.AttackCalculate();
             _bulletAttack.Reload();
         }
 
         private  void Ultimate()
         {
             if (!_input.IsUltimateButton() || _laserAttack.IsReload()) return;
-            _laserAttack.Fire(new AttackInfo
+            _laserAttack.Fire(new AttackInfo(gameObject)
             {
-                Damage = _ultimateDamage,
-                Owner = gameObject
+                Damage = _ultimateDamage
             });
+            GameScore.Instance.UltimateCalculate();
             _laserAttack.Reload();
         }
 
@@ -106,9 +106,9 @@ namespace Basic
 
         public void TakeDamage(AttackInfo info)
         {
-            if (info.Owner == null || info.Owner == gameObject) return;
+            if (info.IsOwner(gameObject)) return;
             _health.Hurt(info.Damage);
-            if (_health.Value() == 0)
+            if (_health.IsDeath())
             {
                 Delete();
             }
@@ -118,12 +118,26 @@ namespace Basic
         public void Delete()
         {
             DeleteGameObjectEvent?.Invoke(gameObject);
+            _ai?.PlayerDeath();
             App.EndGame();
+            Restart();
+        }
+
+        private void Restart()
+        {
             _movement.Limit(0);
             transform.SetPositionAndRotation(Vector3.zero, Quaternion.identity);
             _health.Heal();
-            _ai?.EndEpisode();
         }
-        
+
+        public void HitCallback(HitInfo hitInfo)
+        {
+            GameScore.Instance.HitCalculate(hitInfo);
+        }
+
+        public void SetReward(float value)
+        {
+            _ai?.SetReward(value);
+        }
     }
 }
